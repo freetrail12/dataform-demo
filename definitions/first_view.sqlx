@@ -22,10 +22,10 @@ config {
   schema: "my_schema",
   tags: ["stored_procedure"]
 }
-CREATE PROCEDURE demo.multi_task_procedure()
+CREATE or replace PROCEDURE demo.multi_task_procedure()
 BEGIN
     -- Task 1: Create a table to store employee information
-    CREATE TABLE demo.Employees (
+    CREATE or replace TABLE demo.Employees (
         EmployeeID INT ,
         FirstName string,
         LastName string,
@@ -39,7 +39,7 @@ BEGIN
            (3, 'Alice', 'Johnson', 'IT');
 
     -- Task 3: Create a table to store department information
-    CREATE TABLE demo.Departments (
+    CREATE or replace TABLE demo.Departments (
         DepartmentID INT,
         DepartmentName string,
         Location string

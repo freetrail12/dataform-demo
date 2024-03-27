@@ -1,0 +1,11 @@
+-- run_stored_procedure.sqlx
+
+-- Define the SQLX file configuration
+config {
+  type: "operations",
+  schema: "multi_task_procedure",
+  name: "run_stored_procedure"
+}
+
+-- SQL code to execute the stored procedure
+CALL demo.multi_task_procedure()
