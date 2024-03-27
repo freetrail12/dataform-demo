@@ -1,19 +1,58 @@
 
--- create_table.sqlx
+-- -- create_table.sqlx
+
+-- config {
+--   type: "operations",
+--   schema: "my_schema",
+--   tags: ["stored_procedure"]
+-- }
+
+-- -- Define the stored procedure to create a table
+-- create or replace procedure demo.create_my_table()
+-- begin
+--   create table demo.sample_table (
+--     id INT64,
+--     name STRING,
+--     age INT64
+--   );
+-- end
 
 config {
   type: "operations",
   schema: "my_schema",
   tags: ["stored_procedure"]
 }
+CREATE PROCEDURE demo.multi_task_procedure()
+BEGIN
+    -- Task 1: Create a table to store employee information
+    CREATE TABLE demo.Employees (
+        EmployeeID INT ,
+        FirstName string,
+        LastName string,
+        Department string
+    );
 
--- Define the stored procedure to create a table
-create or replace procedure demo.create_my_table()
-begin
-  create table demo.sample_table (
-    id INT64,
-    name STRING,
-    age INT64
-  );
-end
+    -- Task 2: Insert sample data into the Employees table
+    INSERT INTO demo.Employees (EmployeeID, FirstName, LastName, Department)
+    VALUES (1, 'John', 'Doe', 'HR'),
+           (2, 'Jane', 'Smith', 'Finance'),
+           (3, 'Alice', 'Johnson', 'IT');
+
+    -- Task 3: Create a table to store department information
+    CREATE TABLE demo.Departments (
+        DepartmentID INT,
+        DepartmentName string,
+        Location string
+    );
+
+    -- Task 4: Insert sample data into the Departments table
+    INSERT INTO demo.Departments (DepartmentID, DepartmentName, Location)
+    VALUES (1, 'HR', 'New York'),
+           (2, 'Finance', 'Chicago'),
+           (3, 'IT', 'San Francisco');
+
+    -- Task 5: Fetch and view data from the Employees and Departments tables
+    SELECT * FROM demo.Employees;
+    SELECT * FROM demo.Departments;
+END
 
