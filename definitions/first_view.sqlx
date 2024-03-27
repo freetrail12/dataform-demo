@@ -1,0 +1,19 @@
+
+-- create_table.sqlx
+
+config {
+  type: "operations",
+  schema: "my_schema",
+  tags: ["stored_procedure"]
+}
+
+-- Define the stored procedure to create a table
+create or replace procedure demo.create_my_table()
+begin
+  create table demo.sample_table (
+    id INT64,
+    name STRING,
+    age INT64
+  );
+end
+
