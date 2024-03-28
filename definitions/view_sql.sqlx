@@ -1,0 +1,9 @@
+config {
+    "type": "view",
+    "name": "sample_view",
+    "schema": "demo"
+}
+
+
+select * from demo.Emp
+
