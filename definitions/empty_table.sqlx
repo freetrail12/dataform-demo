@@ -1,0 +1,8 @@
+
+config {
+  type: "table" // Creates a view in BigQuery. Try changing to "table" instead.
+}
+
+-- The rest of a SQLX file contains your SELECT statement used to create the table.
+
+create table demo.empty_table(number int, emp_name string)
