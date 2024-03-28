@@ -1,0 +1,6 @@
+config {
+  type: "table" // Creates a view in BigQuery. Try changing to "table" instead.
+}
+
+create table demo.result_table as
+select * from demo.Emp where Department="IT"
