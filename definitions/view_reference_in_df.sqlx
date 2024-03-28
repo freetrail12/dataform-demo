@@ -1,0 +1,7 @@
+config {
+    "type": "view",
+    "name": "refernce_view",
+    "schema": "demo"  
+}
+
+select * from ${ref("sample_view")}
