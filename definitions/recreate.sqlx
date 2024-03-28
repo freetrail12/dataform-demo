@@ -1,0 +1,6 @@
+config {
+    "type": "operations"
+}
+
+insert into demo.result (EmployeeID, FirstName, LastName, Department)values
+(4, 'ABC', 'XYZ', "IT")
