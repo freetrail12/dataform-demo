@@ -1,0 +1,7 @@
+config {
+    "type": "table",
+    "schema": "demo",
+    "name":"sample_view_1"
+}
+
+select * from ${ref("student_created")}
