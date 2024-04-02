@@ -1,0 +1,6 @@
+config {
+    "schema":"demo"
+}
+CREATE or replace FUNCTION demo.square(x INT64) RETURNS INT64 AS (
+  x * x
+);

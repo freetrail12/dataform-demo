@@ -1,0 +1,17 @@
+config {
+  "type":"table",
+  "schema":"demo",
+  "name": "square_results"
+}
+
+
+WITH numbers AS (
+  SELECT 5 AS number UNION ALL
+  SELECT 8 AS number UNION ALL
+  SELECT 10 AS number
+)
+SELECT 
+  number,
+  demo.square(number) AS square_of_number
+FROM 
+  numbers
