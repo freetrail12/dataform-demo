@@ -1,0 +1,8 @@
+config {
+    type:"operations",
+    schema:"demo",
+    name:"view_on_table"
+}
+
+create or replace view demo.view_on_table as
+select * from ${ref("dep_table_2")}

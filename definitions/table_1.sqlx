@@ -1,0 +1,8 @@
+config {
+    "type": "table",
+    "name": "dep_table_2",
+    "schema": "demo"
+}
+
+select * from demo.Emp
+
