@@ -5,7 +5,7 @@
   "defaultDatabase": "linear-bounty-418409",
   "defaultLocation": "US",
   "vars": {
-    "Department_view":"linear-bounty-418409.demo.dep_created_view",
+    "Department_view":"dep_created_view",
     "Employee_table":"linear-bounty-418409.demo.Employees_created_table"
   }
 }

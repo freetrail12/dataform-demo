@@ -1,0 +1,7 @@
+config {
+  type:"view",
+  schema:"demo",
+  name:"sample"
+}
+
+select * from ${ref(dataform.projectConfig.vars.Department_view)}

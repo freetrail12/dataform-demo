@@ -1,6 +1,8 @@
 config {
-    "type":"declaration",
-    "database":"linear-bounty-418409",
+    "type": "declaration",
+    "database": "linear-bounty-418409",
     "schema": "demo",
-    "name":"student_created"
-}
+    "name": "student_created"
+} AS "short"
+
+
