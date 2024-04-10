@@ -3,6 +3,10 @@
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "linear-bounty-418409",
-  "defaultLocation": "US"
+  "defaultLocation": "US",
+   "vars": {
+      "param1": "default_value1",
+      "param2": "abc"
+    }
 }
     
