@@ -1,0 +1,10 @@
+
+config { 
+    type: "incremental" ,
+    schema:'demo'
+}
+
+select * from demo.Emp 
+${when(incremental(), `WHERE Department="IT"`) }
+
+-- here the table is not rebuilt but is modified/updated

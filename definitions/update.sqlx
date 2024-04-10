@@ -1,0 +1,10 @@
+config {
+    type: "operations",
+    database:'linear-bounty-418409',
+    schema: "demo"
+}
+
+-- Update the incremental table
+update table ${ref(schema="demo","data_insert_in_incremental")}
+set Department = 'ITI'
+where Department = 'IT';

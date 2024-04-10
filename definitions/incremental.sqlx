@@ -1,0 +1,7 @@
+config {
+    type: "incremental",
+    schema: "demo"
+}
+
+
+select * from demo.Emp
