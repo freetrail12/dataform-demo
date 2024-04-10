@@ -1,0 +1,10 @@
+config {
+    type:"table",
+    bigquery: {
+    partitionBy: "DATETIME_TRUNC(timestamp, HOUR)"
+  },
+  schema:"demo",
+}
+
+
+select * from demo.partition_tabel
