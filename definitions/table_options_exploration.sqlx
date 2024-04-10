@@ -1,0 +1,28 @@
+config {
+    "type": "table", // type of table i.e; table, view , incremental
+    "schema": "demo", // dataset name
+    "database": "linear-bounty-418409", // project name
+    "disabled": false, // flag which checks if the table should be created or not
+    "name": "config_test", // name of the table to be created
+    "description": "Employee history", // adds description to table
+    "tags": ["tag", "sample_table"], // adds tag but it is not displayed in table details
+    "dependencies": ['empty_table'], // can add dependencies
+    "columns": { // contains the list of columns
+        "id": "Employee ID",
+        "name": "Employee name"
+    },
+    "bigquery": {
+        "labels": { // to attach labels to created table
+            "dep": "sample_label"
+        }
+    },
+}
+
+-- hasOutput: true // this is used mainly for operations type to check if the operation has output generated
+-- "partitionBy": "DATETIME_TRUNC(timestamp, HOUR)", // Partition condition
+-- "requirePartitionFilter": true
+
+SELECT
+  *
+FROM
+  demo.Dep
